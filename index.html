@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather widget</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="root-container">
+        <div class="cityCardContainer">
+            <p>Картинка по погоде</p>
+            <div id="cityCard-1" class="cityCard">
+                <div class="cityCardContent">
+                    <div class="cityNameContainer">
+                        <span class="cityName boldText fadeinUp"></span>
+                    </div>
+                    
+                    <div class="mainPart">
+                        <div class="tempIndicator fadein">
+                            <div class="tempItem tempSign"></div>
+                            <div class="tempItem tempValue"></div>
+                            <div class="tempItem tempSymbol">&deg;C</div>
+                        </div>
+                        <div class="weatherImgContainer">
+                            <img class="weatherImg" src="" alt=""/>
+                        </div>
+                    </div>
+                    <div class="bottomPart boldText">
+                        <div><img class="symbol" src="img/humidity.svg" alt="humidity"><span class="weatIndicator humidity fadeinDown3"></span></div>
+                        <div><img class="symbol" src="img/windSpeed.svg" alt="windSpeed"><span class="weatIndicator windSpeed fadeinDown2"></span></div>
+                        <div><img class="symbol" src="img/pressure.svg" alt="pressure"><span class="weatIndicator pressure fadeinDown1"></span></div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
+        <div class="cityCardContainer">
+            <p>Картинка из задания</p>
+            <div id="cityCard-2" class="cityCard">
+                <div class="cityCardContent">
+                    <div class="cityNameContainer boldText">
+                        <span class="cityName fadeinUp"></span>
+                    </div>
+                    
+                    <div class="mainPart">
+                        <div class="tempIndicator fadein">
+                            <div class="tempItem tempSign"></div>
+                            <div class="tempItem tempValue"></div>
+                            <div class="tempItem tempSymbol">&deg;C</div>
+                        </div>
+                        <div class="weatherImgContainer">
+                            <img class="weatherImg" src="" alt=""/>
+                        </div>
+                    </div>
+                    <div class="bottomPart boldText">
+                        <div><img class="symbol" src="img/humidity.svg" alt="humidity"><span class="weatIndicator humidity fadeinDown3"></span></div>
+                        <div><img class="symbol" src="img/windSpeed.svg" alt="windSpeed"><span class="weatIndicator windSpeed fadeinDown2"></span></div>
+                        <div><img class="symbol" src="img/pressure.svg" alt="pressure"><span class="weatIndicator pressure fadeinDown1"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div> <!-- /.root-container -->
+
+    <div class="panel">
+        <div>
+            <label>Длительность анимации, мс:<input id="durInput" type="text" size="8"></label>
+        </div>
+        <div>
+            <p>Список городов (редактируемый)</p>
+            <select id="citiesSelect"></select>
+            <button id="addBtn">Добавить</button>
+            <input id="citiesInput" type="text" size="100">
+            <p class="smallText">Можно добавить ID города вручную, через запятую, из списка city.list.json.gz по <a href="http://bulk.openweathermap.org/sample/" target="_blank" rel="noopener noreferrer">ссылке</a>.</p>
+        </div>
+        <div>
+            <button id="updateBtn">Перезапустить виджет</button>
+            <button id="stopBtn">Остановить анимацию</button>
+        </div>
+
+    </div>
+
+    <script defer src="js/main.js"></script>
+</body>
+</html>

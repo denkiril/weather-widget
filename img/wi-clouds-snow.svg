@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg 
+   width="50" 
+   height="50" 
+   version="1.1" 
+   viewBox="0 0 13.229167 13.229167" 
+   xmlns="http://www.w3.org/2000/svg" 
+   xmlns:cc="http://creativecommons.org/ns#" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <metadata>
+      <rdf:RDF>
+      <cc:Work rdf:about="">
+      <dc:format>image/svg+xml</dc:format>
+      <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      <dc:title/>
+      </cc:Work>
+      </rdf:RDF>
+   </metadata>
+
+   <defs>
+      <style type="text/css">
+         @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(45deg); }
+         }
+         #sunRays {
+            animation: rotate 2.3s linear infinite;
+         }
+
+         @keyframes rayFadein {
+            45% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 1; }
+         }
+         #sunRay1 {
+            opacity: 0;
+            animation: rayFadein 2.3s linear infinite;
+         }
+
+         @keyframes rayFadeout {
+            5% { opacity: 1; }
+            10% { opacity: 0; }
+            100% { opacity: 0; }
+         }
+         #sunRayLast {
+            opacity: 1;
+            animation: rayFadeout 2.3s linear infinite;
+         }
+
+         @keyframes raining2 {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -100%; }
+         }
+         @keyframes raining {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -3; }
+         }
+         #rain>line {
+            stroke-dasharray: 0.3 3;
+            stroke-dashoffset: 0;
+            animation: raining 2.3s 1.15s linear infinite;
+         }
+      </style>
+   </defs>
+
+   <g fill="none" stroke="#909090" stroke-linecap="round" stroke-width=".52917" stroke-linejoin="round">
+
+      <path id="cloud" opacity="0" d="M 4.1758098,8.4189393 C 0.67454584,9.65187 0.19508284,4.5565495 3.6746818,4.7439895 4.278183,3.5143995 5.7598937,2.7894894 7.1491847,3.8753594 12.438726,1.5401694 13.142965,9.4534797 7.9175857,8.7196195 7.0117927,10.66558 4.6549757,9.98143 4.1758098,8.4189393 Z">
+         <animate id="cloudFadein" attributeName="d" 
+            from="m 4.5155815,5.8213987 c -0.71369,-0.184483 -0.973598,-1.4070965 -0.170399,-1.8323195 0.377976,-0.47247 1.471001,-0.867819 1.962599,-0.443403 0.990062,0.405135 1.080089,1.609367 0.201436,2.1984275 -0.669558,0.717532 -1.61566,0.408029 -1.993636,0.0773 z"
+            to="M 4.1758098,8.4189393 C 0.67454584,9.65187 0.19508284,4.5565495 3.6746818,4.7439895 4.278183,3.5143995 5.7598937,2.7894894 7.1491847,3.8753594 12.438726,1.5401694 13.142965,9.4534797 7.9175857,8.7196195 7.0117927,10.66558 4.6549757,9.98143 4.1758098,8.4189393 Z"
+            begin="0.3s; cloudFadeout.end+0.4s" dur="0.5s" fill="freeze" />
+         <animate attributeName="opacity" from="0" to="1" 
+            begin="cloudFadein.begin" dur="0.5s" fill="freeze" />
+         <!-- <animate id="cloudFadeout" attributeName="opacity" from="1" to="0" 
+            begin="cloudFadein.end+3.3s" dur="0.4s" fill="freeze" /> -->
+      </path>
+
+      <g id="rain" opacity="0">
+         <line class="rain-2" x1="3.65" x2="3.7" y1="10.33" y2="11.73" />
+         <line class="rain-2" x1="6.38" x2="6.4" y1="11.09" y2="12.23" />
+         <line class="rain-2" x1="8.23" x2="8.3" y1="8.89" y2="10.3" />
+         <line class="rain-2" x1="8.47" x2="8.5" y1="11.06" y2="12.47" />
+         <line class="rain-2" x1="10.98" x2="11" y1="10" y2="11.27" />
+
+         <animate attributeName="opacity" from="0" to="1" 
+            begin="cloudFadein.begin+0.7s" dur="0.3s" fill="freeze" />
+         <!-- <animate attributeName="opacity" from="1" to="0"
+            begin="cloudFadeout.begin" dur="0.4s" fill="freeze" /> -->
+      </g>
+   </g>
+
+</svg>

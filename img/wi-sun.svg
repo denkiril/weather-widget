@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg 
+   width="50" 
+   height="50" 
+   version="1.1" 
+   viewBox="0 0 13.229167 13.229167" 
+   xmlns="http://www.w3.org/2000/svg" 
+   xmlns:cc="http://creativecommons.org/ns#" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <metadata>
+      <rdf:RDF>
+      <cc:Work rdf:about="">
+      <dc:format>image/svg+xml</dc:format>
+      <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      <dc:title/>
+      </cc:Work>
+      </rdf:RDF>
+   </metadata>
+
+   <defs>
+      <style type="text/css">
+         @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(45deg); }
+         }
+         #sunRays {
+            animation: rotate 2.3s linear infinite;
+         }
+
+         @keyframes rayFadein {
+            45% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 1; }
+         }
+         #sunRay1 {
+            opacity: 0;
+            animation: rayFadein 2.3s linear infinite;
+         }
+
+         @keyframes rayFadeout {
+            5% { opacity: 1; }
+            10% { opacity: 0; }
+            100% { opacity: 0; }
+         }
+         #sunRayLast {
+            opacity: 1;
+            animation: rayFadeout 2.3s linear infinite;
+         }
+
+         @keyframes raining2 {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -100%; }
+         }
+         @keyframes raining {
+            0% { stroke-dasharray: 0 3; stroke-dashoffset: 0; }
+            50% { stroke-dasharray: 3; stroke-dashoffset: 0; }
+            100% { stroke-dasharray: 3; stroke-dashoffset: -3; }
+         }
+         #rain>line {
+            stroke-dasharray: 0 3;
+            stroke-dashoffset: 0;
+            animation: raining 1.15s 1.15s linear infinite;
+         }
+      </style>
+   </defs>
+
+   <g fill="none" stroke="#909090" stroke-linecap="round" stroke-width=".52917" stroke-linejoin="round">
+
+      <g id="sun" opacity="0" transform="scale(1.3)">
+         <circle cx="4.5" cy="4" r="1.5"/>
+         <g transform="translate(4.366 3.86817)">
+         <g id="sunRays">
+         <g transform="translate(-4.366 -3.86817)">
+            <path d="M 2.3008296,6.7401919 2.9335082,5.8700406"/>
+            <path d="M 0.87471117,4.4382033 1.9373724,4.2702848"/>
+            <path d="M 1.4940448,1.8020334 2.3641961,2.434712"/>
+            <path d="M 3.7960335,0.37591491 3.963952,1.4385761"/>
+            <path d="M 6.4322034,0.9952486 5.7995248,1.8654"/>
+            <path d="M 7.8583219,3.2972373 6.7956607,3.4651559"/>
+            <path d="M 7.2389882,5.9334072 6.3688368,5.3007286"/>
+            <path d="M 4.9369995,7.3595257 4.7690809,6.2968644"/>
+         </g>
+         </g>
+         </g>
+
+         <animate attributeName="opacity" from="0" to="1" 
+            begin="0.3s" dur="0.4s" fill="freeze" />
+         <!-- <animate attributeName="opacity" from="1" to="0"
+            begin="cloudFadeout.begin" dur="0.4s" fill="freeze" /> -->
+      </g>
+   </g>
+
+</svg>

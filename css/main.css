@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap&subset=cyrillic');
+
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.root-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cityCardContainer {
+    margin: 120px auto;
+}
+.cityCardContainer>p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cityCard {
+    width: 158px;
+    height: 172px;
+    background-color: #ecedea;
+    color: #909090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boldText {
+    font-weight: 600;
+}
+.cityCardContent {
+    width: 78%;
+}
+.cityNameContainer {
+    border-bottom: 2px solid #e3e3e0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.cityName {
+    display: inline-block;
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+.cityName:hover {
+    max-width: none;
+}
+.mainPart {
+    height: 52px;
+    position: relative;
+}
+.tempIndicator {
+    font-size: 36px;
+    display: flex;
+    margin-bottom: 10px;
+    color: #6f6f6f;
+}
+.weatherImgContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.tempSign {
+    font-size: .8em;
+    padding-top: 2px;
+}
+.tempValue {
+    margin-left: -2px;
+}
+.tempSymbol {
+    font-size: .4em;
+    padding-top: 6px;
+}
+
+.symbol {
+    margin-right: 4px;
+    vertical-align: text-bottom;
+    opacity: .8;
+}
+.weatIndicator {
+    font-size: 13px;
+}
+
+@keyframes fadeinUp {
+    0% {
+        opacity: 0;
+    }
+    38% {
+        opacity: 0;
+        position: relative;
+        top: 2px;
+    }
+    100% { 
+        opacity: 1; 
+        position: static;
+    }
+}
+.fadeinUp {
+    animation: fadeinUp 0.6s ease-in forwards;
+}
+
+@keyframes fadeoutUp {
+    0% { 
+        opacity: 1; 
+        position: static; 
+    }
+    100% {
+        opacity: 0;
+        position: relative; 
+        top: 2px; 
+    }
+}
+.fadeoutUp {
+    animation: fadeoutUp 0.5s ease-in forwards;
+}
+
+@keyframes fadein {
+    0% { 
+        opacity: 0;
+    }
+    33% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+.fadein {
+    animation: fadein 0.7s ease-in forwards;
+}
+
+@keyframes fadeout {
+    0% { 
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.fadeout {
+    animation: fadeout 0.4s 0.1s ease-in forwards;
+}
+.fadeoutInst {
+    animation: fadeout 0.4s ease-in forwards;
+}
+
+@keyframes fadeinDown1 {
+    0% {
+        opacity: 0;
+    }
+    40% { 
+        opacity: 0; 
+        position: relative; 
+        top: -2px; 
+    }
+    100% { 
+        opacity: 1; 
+        position: static; 
+    }
+}
+@keyframes fadeinDown2 {
+    0% {
+        opacity: 0;
+    }
+    40% { 
+        position: relative; 
+        top: -2px; 
+    }
+    52% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1; 
+        position: static; 
+    }
+}
+@keyframes fadeinDown3 {
+    0% {
+        opacity: 0;
+    }
+    40% { 
+        position: relative; 
+        top: -2px; 
+    }
+    64% { 
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1; 
+        position: static; 
+    }
+}
+.fadeinDown1 {
+    animation: fadeinDown1 0.8s ease-in forwards;
+}
+.fadeinDown2 {
+    animation: fadeinDown2 0.8s ease-in forwards;
+}
+.fadeinDown3 {
+    animation: fadeinDown3 0.8s ease-in forwards;
+}
+
+@keyframes fadeoutDown1 {
+    0% { 
+        opacity: 1; 
+        position: static; 
+    }
+    100% { 
+        opacity: 0;
+        position: relative; 
+        top: 2px;
+    }
+}
+@keyframes fadeoutDown2 {
+    0% { 
+        opacity: 1; 
+        position: static; 
+    }
+    4% { 
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        position: relative; 
+        top: 2px;
+    }
+}
+@keyframes fadeoutDown3 {
+    0% { 
+        opacity: 1; 
+        position: static; 
+    }
+    9% { 
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+        position: relative; 
+        top: 2px;
+    }
+}
+.fadeoutDown1 {
+    animation: fadeoutDown1 0.4s 0.1s ease-in forwards;
+}
+.fadeoutDown2 {
+    animation: fadeoutDown2 0.4s 0.1s ease-in forwards;
+}
+.fadeoutDown3 {
+    animation: fadeoutDown3 0.4s 0.1s ease-in forwards;
+}
+
+.hide {
+    display: none;
+}
+.panel {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.panel>div {
+    margin-bottom: 20px;
+}
+.panel input {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.panel button+button {
+    margin-left: 20px;
+}
+.smallText {
+    font-size: 0.8em;
+}
